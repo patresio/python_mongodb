@@ -28,9 +28,7 @@ def create_new_user():
         )
     )
     agency = str(
-        input(
-            "Input agency: \n 1 Santander \n 2 Bradesco \n 3 Banco do Brasil \n 4 Caixa \n"
-        )
+        input("Input agency: \n 1 Santander \n 2 Nubank \n 3 Itau \n 4 Outros \n")
     )
     num_account = int(input("Input number acccount: \n"))
 
@@ -39,9 +37,9 @@ def create_new_user():
 
     select_agency = {
         "1": "Santander",
-        "2": "Bradesco",
-        "3": "Banco do Brasil",
-        "4": "Caixa",
+        "2": "Nubank",
+        "3": "Itau",
+        "4": "Outros",
     }
 
     create = models.create_user(
@@ -71,7 +69,6 @@ def read_user():
         metadata = formatting_returns(user)
 
         print("_" * 20, "Account details", "_" * 20)
-        # print(f"\n ID: {user['_id']} \n Name: {user['name']} \n CPF: {user['cpf']} \n Address: {user['address']} \n Account: {user['account']['type']} \n Agency: {user['account']['agency']} \n Number account: {user['account']['number']} \n Date register: {user['date_time']}")
         print(metadata)
         print("_" * 40)
     else:

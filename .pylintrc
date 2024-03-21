@@ -27,6 +27,9 @@ disable=
             C0301,
             E1120,
             W0611,
+            E0213,
+            E0211,
+            W1309,
 
 
 # Analyse import fallback blocks. This can be used to support both Python 2 and
